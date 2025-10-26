@@ -108,7 +108,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 main::before {
@@ -194,6 +193,19 @@ header::before {
   color: var(--primary-color-contrast);
 }
 
+#mute-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+#mute-button img {
+  width: 24px;
+  height: 24px;
+}
+
 /*** WORLD CHARACTERS STYLES ***/
 
 .world-characters {
@@ -234,6 +246,7 @@ section {
 
 .container {
   max-width: 1200px;
+  padding: 0 20px;
 }
 
 #section-inverted-world {
@@ -257,7 +270,6 @@ section {
 
 #section-stranger-things-trailer .section-texts h2 {
   max-width: 425px;
-  display: inline-block;
 }
 
 #section-stranger-things-trailer .video-frame {
@@ -289,7 +301,7 @@ section {
 }
 
 #section-stranger-things-gallery .container h2 {
-  width: 800px;
+  max-width: 800px;
 }
 
 #section-stranger-things-gallery .gallery-container {
@@ -303,7 +315,7 @@ section {
   height: 250px;
   outline: 20px solid var(--highlight-color);
   border: 3px solid var(--primary-color);
-  box-sizing: initial;
+  box-sizing: content-box;
 }
 
 #section-stranger-things-gallery .gallery-image img {
@@ -323,7 +335,7 @@ section {
 }
 
 #section-form h2 {
-  width: 600px;
+  max-width: 600px;
 }
 
 #section-form .form-content h3 {
@@ -341,13 +353,13 @@ section {
 }
 
 #section-form .form-content h3 {
-  flex-basis: 30%;
+  width: 30%;
   text-align: left;
   margin: 0;
 }
 
 #section-form .form-container {
-  flex-basis: 50%;
+  width: 50%;
   position: relative;
 }
 
@@ -377,7 +389,6 @@ section {
   background-color: var(--field-background-color);
   color: var(--primary-color-contrast);
   max-width: 300px;
-  align-self: center;
 }
 
 #section-form .form-container form button:hover {
@@ -475,6 +486,10 @@ footer::after {
   #section-form .form-content h3 {
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  #section-form .form-container {
+    width: 100%;
   }
 }
 
