@@ -423,3 +423,104 @@ footer::after {
   right: -50px;
   transform: rotateZ(10deg);
 }
+
+/*** RESPONSIVE STYLES ***/
+
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 2.5rem;
+  }
+
+  .header-content {
+    padding: 40px 20px;
+  }
+
+  header {
+    min-height: 600px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  #section-inverted-world .section-texts,
+  #section-stranger-things-trailer .section-texts {
+    width: 100%;
+  }
+
+  #section-stranger-things-trailer .section-texts {
+    text-align: center;
+  }
+
+  #section-stranger-things-trailer .video-frame {
+    margin-bottom: 20px;
+  }
+
+  #section-stranger-things-gallery .container h2 {
+    width: 100%;
+  }
+
+  #section-stranger-things-gallery .gallery-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #section-form .form-content {
+    flex-direction: column;
+  }
+
+  #section-form .form-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+  .header-content img {
+    width: 100%;
+  }
+
+  .header-content p {
+    margin: 20px 0 30px;
+  }
+
+  header {
+    min-height: 500px;
+  }
+
+  #section-stranger-things-trailer .video-frame iframe {
+    width: 100%;
+    height: 200px;
+    left: 0;
+    bottom: 0;
+  }
+
+  #section-stranger-things-gallery {
+    background: none;
+  }
+
+  #section-stranger-things-gallery .gallery-container {
+    gap: 20px;
+  }
+
+  #section-stranger-things-gallery .gallery-image {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #section-form h2 {
+    width: 100%;
+  }
+
+  footer::before,
+  footer::after {
+    width: 150px;
+  }
+}
